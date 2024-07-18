@@ -1,0 +1,17 @@
+- name: Update and install Nginx
+  apt:
+    update_cache: yes
+    name: nginx
+    state: present
+
+- name: Deploy index.html
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+
+- name: Ensure Nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+ 
