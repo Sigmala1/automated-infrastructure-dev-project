@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git credentialsId: 'github-credentials', url: 'https://github.com/your-username/your-repo.git'
+                git credentialsId: 'github-credentials', url: 'https://github.com/Sigmala1/automated-infrastructure-dev-project.git'
             }
         }
 
